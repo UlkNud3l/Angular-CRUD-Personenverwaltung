@@ -1,0 +1,19 @@
+<div *ngIf="person">
+    <h2>{{person.name}} Details</h2>
+    <div><span>ID: </span>{{person.id}}</div>
+    <div>
+        <label for="person.name">Name: </label>
+        <input id="person-name" [(ngModel)]="person.name" placeholder="Name">
+    </div>
+    <div>
+        <label for="person.surname">Nachname: </label>
+        <input id="person-surname" [(ngModel)]="person.surname" placeholder="Nachname">
+    </div>
+    <div>
+        <label for="person.email">Email: </label>
+        <input id="person-email" [(ngModel)]="person.email" placeholder="Email">
+    </div>
+    <div>
+        <button type="button" (click)="onDelete()">Löschen</button>
+    </div>
+</div>

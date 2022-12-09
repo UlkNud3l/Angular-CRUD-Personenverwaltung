@@ -1,0 +1,14 @@
+<h2>Alle Personen</h2>
+
+<ul class="persons">
+    <li *ngFor="let person of persons">
+        <button type="button" (click)="onSelect(person)">
+            <span class="name">{{person.name}} </span>
+            <span class="surname">{{person.surname}}</span>
+        </button>
+    </li>
+</ul>
+
+<button type="button" (click)="onAdd()">Person hinzufügen</button>
+
+<app-person-detail [person]="selectedPerson"></app-person-detail>
